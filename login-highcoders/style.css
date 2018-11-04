@@ -12,7 +12,7 @@ body, h1, h2, h3, h4, h5, p, span{
 }
 
 .left{
-    width: 50%;
+    width: 60%;
     height: 100vh;
     background-size: 100% 100%;
     background-image: url(left.png);
@@ -21,7 +21,7 @@ body, h1, h2, h3, h4, h5, p, span{
 
 .form-group{
     padding: 3em;
-    padding-top: 28vh;
+    padding-top: 20vh;
     width: 60%;
 }
 

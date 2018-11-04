@@ -1,18 +1,12 @@
 import React, { Component } from 'react';
 
 import './User.css';
-/*
-import img1 from '../../media/01-viewerfeed.jpg'
-import img2 from '../../media/02-viewerfeed.png'
-import img3 from '../../media/03-viewerfeed.jpg'
-import img4 from '../../media/04-viewerfeed.jpg'
-*/
 
 class User extends Component {
 
   render() {
     return (
-      <div className="home">
+      <div className="user">
 		<div className="user-row" id="search-container">
 
 				<input type="text" name="search" placeholder="Search.." />

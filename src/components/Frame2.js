@@ -4,7 +4,7 @@ import Home from './Home/Home';
 import User from './User/User';
 
 
-class Frame extends Component {
+class Frame2 extends Component {
 	constructor(props){
 		super(props);
 		this.state = {
@@ -15,13 +15,7 @@ class Frame extends Component {
 	}
 	
 	handleClick(e){
-		switch(e.target.value){
-         case 'User':
-             this.setState({activePage: <User />, userDisplay: 'none'});
-             break;
-         case 'Home':
-				this.setState({activePage: <Home />});
-		}
+console.log('connected');
 	}
 		
   render() {
@@ -37,16 +31,10 @@ class Frame extends Component {
 			</nav>
         </header>
 		
-		<section className="display">
-		{this.state.activePage}
-		</section>
+</div>
 		
-		<footer className="footer">
-
-		</footer>
-      </div>
     );
   }
 }
 
-export default Frame;
+export default Frame2;

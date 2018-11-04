@@ -1,0 +1,55 @@
+.home{
+		background: url('../../media/bg.png');
+	    margin:0;
+    position:relative;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+body, h1, h2, h3, h4, h5, p, span{
+    font-family: 'Montserrat', sans-serif!important;
+}
+
+.left{
+    width: 50%;
+    height: 100vh;
+    background-size: 100% 100%;
+    padding: 0;
+
+    background-repeat: no-repeat;
+}
+
+.form-group{
+    padding: 3em;
+    padding-top: 28vh;
+    width: 60%;
+}
+
+h1{
+    margin: 0;
+}
+
+label{
+    font-size: 25px;
+}
+
+input{
+    background-color: #F5F5F5!important;
+    border: 0px!important;
+    height: 54px;
+    padding: 1.1em 16px!important;
+    font-size: 1.5em!important;
+    margin-bottom:10px!important;
+}
+
+button{
+    font-size: 1.2em!important; padding: .5em 1.5em!important;
+}
+
+#login-heading{
+	padding-bottom: 70px;
+	font-size:38px;
+	text-transform:uppercase;
+	font-weight:600;
+}
+
