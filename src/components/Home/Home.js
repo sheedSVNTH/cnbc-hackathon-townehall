@@ -39,19 +39,19 @@ class Home extends Component {
 	handleSubmit(e){
 		this.setState({handleDisplay: true})
 	}
-
 	
   render() {
 	  const style = this.state.handleDisplay ? {display: 'none'} : {};
 	  const styleUser = this.state.handleDisplay ? {display:'block'}: {display: 'none'};
-	  
     return (
 		<div>
 			<Frame2 />
 			<div className="home" style={style}>
 			{this.logVar}
 			</div>
-		<User style={styleUser} />
+		<div style={styleUser}>
+		<User />
+		</div>
 		</div>
     );
   }
