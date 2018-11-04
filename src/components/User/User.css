@@ -120,8 +120,16 @@ h5{
 	height: 30px; 
 }
 
-p{
+.comment{
+	display: flex;
+	flex-direction: row; 
+}
+.comment p{
 	font-size: calc(8px + 2vmin);
 	font-weight: 300; 
+}
+
+.comment img{
+	height: 40px; 
 }
 

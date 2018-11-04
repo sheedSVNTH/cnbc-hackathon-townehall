@@ -1,10 +1,15 @@
 import React, { Component } from 'react';
 
 import './User.css';
+import photo1 from '../../media/obama-heart.jpg'
 
 class User extends Component {
 
   render() {
+
+	  let commentData = [
+		  {name: 'PoliticalPatty', avatar: 'photo1', comment: 'If only Obama could run again :('},
+		  {name: 'StubbonSara', avatar: 'photo2', comment: 'We all cant get what we want. Trump is President. #trump2020'}];
     return (
       <div className="user">
 		<div className="user-row" id="search-container">
@@ -41,12 +46,12 @@ class User extends Component {
 		
 		<div className="user-row" id="feed-container">
 			<div className="card">
+		<h4 id="trending-tag">Active User Engagement</h4>
 				<div id="feed-item">
-					<h5 id="feed-title">Active User Engagement</h5>
+					
 				<input id="comments" type="text" name="search" placeholder="EnterComment.." />
-						<p>sample text</p>
-						<p>sample text</p>
-						<p>sample text</p>
+						<div className="comment"><img src={photo1} alt="photo1" /> <p>User1</p> <p>Comment sample</p></div>
+
 				</div>
 
 			</div>
