@@ -10,6 +10,14 @@
   	color: white;
 	text-align: center; 
 }
+#user-greeting{
+	color: #61dafb;
+	font-weight: 500;
+	background-color: transparent;
+	border: none; 
+	font-size: calc(17px + 2vmin);
+	font-family: 'Cairo', sans-serif;
+}
 
 .Frame-link {
 	color: #61dafb;

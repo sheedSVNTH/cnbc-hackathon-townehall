@@ -2,14 +2,16 @@ import React, { Component } from 'react';
 
 import './User.css';
 import photo1 from '../../media/obama-heart.jpg'
+import photo2 from '../../media/trump-img.jpg'
+import photo3 from '../../media/peace.gif'
 
 class User extends Component {
 
   render() {
-
-	  let commentData = [
-		  {name: 'PoliticalPatty', avatar: 'photo1', comment: 'If only Obama could run again :('},
-		  {name: 'StubbonSara', avatar: 'photo2', comment: 'We all cant get what we want. Trump is President. #trump2020'}];
+	  const data =[{"name":"PoliticalPatty", "avatar": photo1, "comment": "If only Obama could run again :("},{"name":"StubbornSuzie", "avatar": photo2, "comment": "Trump is our President! Deal with it!!"}, {"name":"FriendlyFred", "avatar": photo3, "comment": "I think we should be happy we are able to vote!"}];
+	  
+	  const listItems = data.map((d) => <li key={d.name}><div className="comment"><img src={d.avatar} alt="photo1" /> <p>{d.name}</p> <p>: {d.comment}</p></div></li>);
+	  
     return (
       <div className="user">
 		<div className="user-row" id="search-container">
@@ -37,23 +39,20 @@ class User extends Component {
 		
 		<div className="user-row" id="video-container">
 			<div className="card">
-			<div id="user-video">
-	<iframe width="560" height="315" src="https://embed.wirewax.com/8117490/" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
-		<h4>Obama campaigns for Andrew Gillum and Bill Nelson in Florida</h4>
-			</div>
+				<div id="user-video">
+					<iframe width="560" height="315" src="https://embed.wirewax.com/8117490/" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+					<h4>Obama campaigns for Andrew Gillum and Bill Nelson in Florida</h4>
+				</div>
 			</div>
 		</div>
 		
 		<div className="user-row" id="feed-container">
 			<div className="card">
 		<h4 id="trending-tag">Active User Engagement</h4>
-				<div id="feed-item">
-					
-				<input id="comments" type="text" name="search" placeholder="EnterComment.." />
-						<div className="comment"><img src={photo1} alt="photo1" /> <p>User1</p> <p>Comment sample</p></div>
-
-				</div>
-
+		
+				<input id="comment-input" type="text" name="search" placeholder="EnterComment.." />
+											<div>{listItems}</div>
+			
 			</div>
 		</div>
 

@@ -8,7 +8,8 @@ class Home extends Component {
 	constructor(props){
 		super(props);
 		this.state = {
-			handleDisplay: false
+			handleDisplay: false,
+			userDisplay: 'none'
 		};
 		this.handleSubmit = this.handleSubmit.bind(this);
 	
@@ -28,7 +29,7 @@ class Home extends Component {
 										<button type="button" className="btn btn-light">Sign In</button>
 									</div>
 
-									<div style={{marginTop: 20}}>Forgot Password|Forgot Username</div>
+									<div id="forgot" style={{marginTop: 20}}><a href='#'> Forgot Password  |  Forgot Username</a></div>
 								</div>
 							</form>
 						</div>
@@ -37,7 +38,7 @@ class Home extends Component {
 }
 	
 	handleSubmit(e){
-		this.setState({handleDisplay: true})
+		this.setState({handleDisplay: true, userDisplay: 'block'})
 	}
 	
   render() {
@@ -45,7 +46,7 @@ class Home extends Component {
 	  const styleUser = this.state.handleDisplay ? {display:'block'}: {display: 'none'};
     return (
 		<div>
-			<Frame2 />
+			<Frame2 userDisplay={this.state.userDisplay}/>
 			<div className="home" style={style}>
 			{this.logVar}
 			</div>
